@@ -1,0 +1,149 @@
+﻿@model Tuple<Shop.Model.Entities.Product,List<Shop.Model.Entities.Product>>
+
+@{
+    ViewData["Title"] = "ProductDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 offset-lg-2 text-center">
+				<div class="breadcrumb-text">
+					<p>See more Details</p>
+					<h1>Product Detail</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end breadcrumb section -->
+
+<!-- single product -->
+<div class="single-product mt-150 mb-150">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5">
+				<div class="single-product-img">
+					<img src="~/img/products/@Model.Item1.Image" alt="">
+				</div>
+			</div>
+			<div class="col-md-7">
+				<div class="single-product-content">
+					<h3>@Model.Item1.Name</h3>
+					<p class="single-product-pricing" style="font-size: 20px; font-weight: 200;">
+						@Model.Item1.Promotion <del class="product-price">@Model.Item1.Price</del></p>
+                    <p><strong>Mô tả: </strong>@Model.Item1.Description</p>
+
+					<div class="single-product-form">
+						<div style="display: flex; align-items: center; margin-bottom: 10px;">
+							<label for="quantity">Quantity:</label>
+							<input type="number" id="quantity" name="quantity" min="1" 
+								value="1" style="margin-left: 10px; width: 60px;">
+						</div>
+						<div id="popup">
+							<p><i class="fas fa-shopping-cart"></i> Đã thêm sản phẩm vào giỏ hàng</p>
+						</div>
+						<a href="#" onclick="addToCartDetail('@Model.Item1.Id', document.getElementById('quantity').value)" 
+						class="cart-btn" style="margin: 10px 0px"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+					</div>
+					<style>
+						/* Thêm các kiểu CSS cho popup */
+						#popup {
+							display: none;
+							position: fixed;
+							top: 70px; /* Đặt khoảng cách từ trên xuống để nằm dưới header */
+							right: 20px;
+							background-color: #fff;
+							padding: 20px;
+							border: 2px solid #000; /* Viền đen 2px */
+							border-radius: 10px; /* Bo góc 10px */
+							box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+							z-index: 9999;
+						}
+					</style>
+					<script>
+						function addToCartDetail(itemId, quantity) {
+							// Thực hiện thêm sản phẩm vào giỏ hàng với số lượng và ID được chuyển vào
+							var popup = document.getElementById('popup');
+							popup.style.display = 'block';
+
+							// Ẩn popup sau 5 giây
+							setTimeout(function () {
+								popup.style.display = 'none';
+							}, 5000);
+
+							console.log('Item ID:', itemId);
+							console.log('Quantity:', quantity);
+
+							// Gọi hàm xử lý thêm vào giỏ hàng
+							addToCartDetailAjax(itemId, quantity);
+						}
+
+						function addToCartDetailAjax(itemId, quantity) {
+							// Sử dụng AJAX để gọi phương thức AddToCart trong CartController
+							$.ajax({
+								url: '/Cart/AddToCartDetail',
+								type: 'POST',
+								data: { id: itemId, quantity: quantity },
+								success: function (response) {
+									// Xử lý kết quả trả về từ phương thức AddToCart
+									console.log('Response from AddToCart:', response);
+
+									// Cập nhật số lượng hàng trong giỏ hàng trên giao diện
+									// Ví dụ: Hiển thị số lượng ở một nơi nào đó trên trang
+								},
+								error: function (error) {
+									console.log('Error:', error);
+								}
+							});
+						}
+					</script>
+
+					<h4 style="margin-top:10px">Share:</h4>
+					<ul class="product-share">
+						<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+						<li><a href=""><i class="fab fa-twitter"></i></a></li>
+						<li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
+						<li><a href=""><i class="fab fa-linkedin"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end single product -->
+
+<!-- more products -->
+<div class="more-products mb-150">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 offset-lg-2 text-center">
+				<div class="section-title">	
+					<h3><span class="orange-text">Related</span> Products</h3>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			@foreach (var item in Model.Item2.OrderBy(x => Guid.NewGuid()).Take(3))
+			{
+				<div class="col-lg-4 col-md-6 text-center">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="/Home/ProductDetails/@item.Id"><img src="~/img/products/@item.Image" alt=""></a>
+						</div>
+						<h3>@item.Name</h3>
+						<p style="font-size: 20px; font-weight: 200;" class="product-price">
+							@item.Promotion <del class="product-price">@item.Price</del></p>
+						<a href="#" onclick="addToCart('@item.Id')" class="cart-btn">
+							<i class="fas fa-shopping-cart"></i> Add to Cart</a>
+					</div>
+				</div>
+			}
+		</div>
+	</div>
+</div>
+<!-- end more products -->
+
+

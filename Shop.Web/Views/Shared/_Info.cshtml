@@ -1,0 +1,21 @@
+﻿@{
+    dynamic info = ViewBag.Info;
+}
+<div class="col-lg-3 col-md-6">
+	<div class="footer-box about-widget">
+		<h2 class="widget-title">About us</h2>
+	<p>@info.AboutUs</p>
+	</div>
+</div>
+<div class="col-lg-3 col-md-6">
+	<div class="footer-box get-in-touch">
+		<h2 class="widget-title">Get in Touch</h2>
+		<ul>
+			<li>@info.Address</li>
+			<li>@info.Email</li>
+			<li>@info.Phone</li>
+		</ul>
+	</div>
+</div>
+
+

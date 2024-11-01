@@ -1,0 +1,69 @@
+﻿@model Shop.Model.Entities.Product
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Sửa sản phẩm</h5>
+            <form action="/Administrator/Product/Edit" method="post" class="row g-md-5">
+                <div class="col-12">
+                    <label asp-for="Id" class="form-label"></label>
+                    <input asp-for="Id" class="form-control" value="@Model.Id" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="Name" class="form-label"></label>
+                    <input asp-for="Name" class="form-control" value="@Model.Name" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="CategoryId" class="form-label"></label>
+                    <input asp-for="CategoryId" class="form-control" value="@Model.CategoryId" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="Image" class="form-label"></label>
+                    <img style="width:50px;height:50px" src="~/assets/images/product/@Model.Image" /><input type="file" asp-for="Image" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="MoreImage" class="form-label"></label>
+                    <img style="width:50px;height:50px" src="~/assets/images/product/@Model.Image" /><input type="file" asp-for="MoreImage" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="Price" class="form-label"></label>
+                    <input asp-for="Price" class="form-control" value="@Model.Price" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="Promotion" class="form-label"></label>
+                    <input asp-for="Promotion" class="form-control" value="@Model.Promotion" />
+                </div>
+                <div class="col-12">
+                    @Html.LabelFor(model => model.Description, htmlAttributes: new{@class = "control-label"})
+                    @Html.TextArea("Description", new { 
+                        Value = @Html.Raw(Model.Description)
+                    })
+                    <script>
+                        CKEDITOR.replace('Description');
+                    </script>
+                </div>
+                <div class="col-12">
+                    <label asp-for="Status" class="form-label"></label>
+                    <div>
+                        <input checked="checked" type="radio" id="True" asp-for="Status" value="True" class="form-control" style="width:20px; height:20px;" />
+                        <label for="True" class="form-check-label">True</label>
+                    </div>
+                    <div>
+                         <input type="radio" id="False" asp-for="Status" value="False" class="form-control" style="width:20px; height:20px;"/>
+                        <label for="False" class="form-check-label">False</label>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Cập nhật</button>
+                    <button type="reset" class="btn btn-secondary">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

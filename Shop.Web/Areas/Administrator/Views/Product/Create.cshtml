@@ -1,0 +1,67 @@
+﻿@model Shop.Model.Entities.Product
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Thêm mới sản phẩm</h5>
+            <form action="/Administrator/Product/Create" method="post" class="row-col-md-6">
+                <div class="col-12">
+                    <label asp-for="Id" class="form-label"></label>
+                    <input asp-for="Id" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="Name" class="form-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="CategoryId" class="form-label"></label>
+                    <input asp-for="CategoryId" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="Image" class="form-label"></label>
+                    <input type="file" asp-for="Image" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="MoreImage" class="form-label"></label>
+                    <input type="file" asp-for="MoreImage" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="Price" class="form-label"></label>
+                    <input asp-for="Price" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="Promotion" class="form-label"></label>
+                    <input asp-for="Promotion" class="form-control" />
+                </div>
+                <div class="col-12">
+                    @Html.LabelFor(model => model.Description, htmlAttributes: new{@class = "control-label"})
+                    @Html.TextAreaFor(model => model.Description, htmlAttributes: new {@class = "form-control"})
+                    <script>
+                        CKEDITOR.replace('Description');
+                    </script>
+                </div>
+                <div class="col-12">
+                    <label asp-for="Status" class="form-label"></label>
+                    <div>
+                        <input checked="checked" type="radio" id="True" asp-for="Status" value="True" class="form-control" style="width:20px; height:20px;" />
+                        <label for="True" class="form-check-label">True</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="False" asp-for="Status" value="False" class="form-control" style="width:20px; height:20px;"/>
+                        <label for="False" class="form-check-label">False</label>
+                    </div>
+                </div>
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary">Thêm mới</button>
+                    <button type="reset" class="btn btn-secondary">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

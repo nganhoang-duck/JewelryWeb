@@ -1,0 +1,60 @@
+﻿@model Shop.Model.Entities.Order
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Sửa trạng thái đặt hàng</h5>
+            <form action="/Administrator/Order/Edit" method="post" class="row g-md-5">
+                <div class="col-12">
+                    <label asp-for="Id" class="form-label"></label>
+                    <input asp-for="Id" class="form-control" value="@Model.Id" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="CustomerName" class="form-label"></label>
+                    <input asp-for="CustomerName" class="form-control" value="@Model.CustomerName" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="CustomerAddress" class="form-label"></label>
+                    <input asp-for="CustomerAddress" class="form-control" value="@Model.CustomerAddress" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="CustomerEmail" class="form-label"></label>
+                    <input asp-for="CustomerEmail" class="form-control" value="@Model.CustomerEmail" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="CustomerMobile" class="form-label"></label>
+                    <input asp-for="CustomerMobile" class="form-control" value="@Model.CustomerMobile" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="CustomerMessage" class="form-label"></label>
+                    <input asp-for="CustomerMessage" class="form-control" value="@Model.CustomerMessage" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="CreatedDate" class="form-label"></label>
+                    <input asp-for="CreatedDate" class="form-control" value="@Model.CreatedDate" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="PaymentMethod" class="form-label"></label>
+                    <input asp-for="PaymentMethod" class="form-control" value="@Model.PaymentMethod" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="PaymentStatus" class="form-label"></label>
+                    <input asp-for="PaymentStatus" class="form-control" value="@Model.PaymentStatus" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="Status" class="form-label"></label>
+                    <input asp-for="Status" class="form-control" value="@Model.Status" />
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Cập nhật</button>
+                    <button type="reset" class="btn btn-secondary">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
