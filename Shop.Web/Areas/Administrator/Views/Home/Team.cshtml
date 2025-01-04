@@ -1,0 +1,44 @@
+﻿@model List<Shop.Model.Entities.Team>
+@{
+    ViewData["Title"] = "Team";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Team</h1>
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Danh sách nhân viên công ty</h5>
+            <a href="/Administrator/Post/Create" class="btn btn-primary mb-2">Thêm mới</a>
+            <table id="myTable" class="table">
+                <thead>
+                    <tr>
+                        <th>Mã nhân viên</th>
+                        <th>Tên nhân viên</th>
+                        <th>Hình ảnh</th>
+                        <th>Công việc</th>
+                        <th>Câu nói</th>
+                        <th>Chức năng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Name</td>
+                            <td><img style="width:50px;height:50px" src="~/assets/images/team/@item.Image" /></td>
+                            <td>@item.Career</td>
+                            <td id="sayings">@item.Sayings</td>
+                            <td>
+                                <a href="/Administrator/Home/Edit/@item.Id"><i class="fa fa-paint-brush"></i></a> |
+                                <a href="/Administrator/Home/Delete/@item.Id" onclick="return confirm('Bạn có chắc chắn xóa?');"><i class="fa fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

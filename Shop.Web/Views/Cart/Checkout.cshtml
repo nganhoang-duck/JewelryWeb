@@ -1,0 +1,227 @@
+﻿@model Shop.Model.Entities.Order
+@{
+    ViewData["Title"] = "Checkout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 offset-lg-2 text-center">
+				<div class="breadcrumb-text">
+					<p>Luxurious Jewelry</p>
+					<h1>Check Out</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end breadcrumb section -->
+<!-- check out section -->
+<div class="checkout-section mt-150 mb-150">
+	<div class="container">
+		<div class="row">
+            <div class="col-lg-4">
+                <div class="order-details-wrap">
+					@{
+						double tongTien = 0;
+						List<CartItem> cart = (List<CartItem>)Context.Session.Get<List<CartItem>>("Cart");
+					}
+                    <table class="order-details">
+                        <thead>
+                            <tr>
+                                <th>Your order Details</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody class="order-details-body">
+                            @foreach (var item in cart)
+                            {
+                                <tr>
+                                    <td>@item.ProductOrder.Name</td>
+                                    <td>
+                                        @{
+                                            double thanhTien = (double)(item.ProductOrder.Promotion * item.Quantity);
+                                            tongTien += thanhTien;
+                                        }
+                                        @thanhTien
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                        <tbody class="checkout-details">
+                            <tr>
+                                <td>Tổng tiền hàng</td>
+                                <td>@tongTien</td>
+                            </tr>
+                            <tr>
+                                <td>Phí vận chuyển</td>
+                                <td>
+                                    @{
+                                        double tienShip = 30000;
+                                    }
+                                    @tienShip
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tổng tiền thanh toán</td>
+                                <td>
+                                    @{
+                                        double tongTienThanhToan = 0;
+                                        tongTienThanhToan = tongTien + tienShip;
+                                    }
+                                    @tongTienThanhToan
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+			<div class="col-lg-8">
+				<div class="checkout-accordion-wrap">
+                    <div class="accordion" id="accordionExample">
+						<div class="card single-accordion">
+							<div class="card-header" id="headingOne">
+								<h5 class="mb-0">
+									<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+										Chi tiết giỏ hàng
+									</button>
+								</h5>
+							</div>
+							<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+								<div class="card-body">
+									<div class="card-details">
+										<div class="cart-table-wrap">
+											<table class="cart-table">
+												<thead class="cart-table-head">
+													<tr class="table-head-row">
+														<th class="product-image">Ảnh sản phẩm</th>
+														<th class="product-name">Tên</th>
+														<th class="product-price">Đơn giá</th>
+														<th class="product-quantity">Số lượng</th>
+														<th class="product-total-price">Thành tiền</th>
+													</tr>
+												</thead>
+												<tbody>
+													@foreach (var item in cart)
+													{
+														<tr class="data-product-id=@item.ProductOrder.Id">
+															<td class="product-image"><img style="width:50px; height: 50px" src="~/img/products/@item.ProductOrder.Image" /></td>
+															<td class="product-name">@item.ProductOrder.Name</td>
+															<td class="product-price">@item.ProductOrder.Promotion</td>
+															<td class="product-quantity">@item.Quantity</td>
+															<td class="product-total-price">
+																@{
+																	double thanhTien = (double)(item.ProductOrder.Promotion * item.Quantity);
+																}
+																@thanhTien
+															</td>
+														</tr>
+													}
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card single-accordion">
+							<div class="card-header" id="headingTwo">
+								<h5 class="mb-0">
+									<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+										Thông tin đặt hàng
+									</button>
+								</h5>
+							</div>
+							<div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
+								<div class="card-body">
+									<div class="billing-address-form">
+										<form action="/Cart/Checkout" method="post">
+											<p><input asp-for="@Model.CustomerName" type="text" 
+												placeholder="Name" required></p>
+											<p><input asp-for="@Model.CustomerAddress" type="text" 
+												placeholder="Address" required></p>
+											<p><input asp-for="@Model.CustomerEmail" type="email" 
+												placeholder="Email" required></p>
+											<p><input asp-for="@Model.CustomerMobile" type="tel" 
+												pattern="[0-9]{10}" placeholder="Phone" required></p>
+											<p><textarea asp-for="@Model.CustomerMessage" name="CustomerMessage" cols="30" 
+												rows="10" placeholder="Your Message"></textarea></p>
+											<div class="form-group">
+												<label for="paymentMethod">Payment Method</label>
+												<div class="form-check">
+													<input class="form-check-input" type="radio" 
+													name="PaymentMethod" id="cash" value="Cash" checked>
+													<label class="form-check-label" for="cash">
+														Thanh toán bằng tiền mặt
+													</label>
+												</div>
+												<!--
+												<div class="form-check">
+													<input class="form-check-input" type="radio" name="PaymentMethod" id="bankTransfer" value="BankTransfer">
+													<label class="form-check-label" for="bankTransfer">
+														Thanh toán bằng tài khoản ngân hàng
+													</label>
+												</div>
+                                                -->
+											</div>
+											<button type="submit" class="boxed-btn" onclick="showPopup()">Place Order</button>
+											<div id="successPopup" class="popup">
+												<div class="popup-content">
+													<span class="close" onclick="closePopup()">&times;</span>
+													<p>Đặt hàng thành công!</p>
+												</div>
+											</div>
+											<style>
+												.popup {
+													display: none;
+													position: fixed;
+													top: 50%;
+													left: 50%;
+													transform: translate(-50%, -50%);
+													padding: 20px;
+													background-color: #ffffff;
+													border: 1px solid #ddd;
+													z-index: 1000;
+												}
+
+												.popup-content {
+													text-align: center;
+												}
+
+												.close {
+													position: absolute;
+													top: 10px;
+													right: 10px;
+													cursor: pointer;
+												}
+
+											</style>
+											<script>
+												function showPopup() {
+													setTimeout(function () {
+														var popup = document.getElementById("successPopup");
+														popup.style.display = "block";
+													}, 5000);
+												}
+
+												function closePopup() {
+													var popup = document.getElementById("successPopup");
+													popup.style.display = "none";
+												}
+
+											</script>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end check out section -->

@@ -1,0 +1,52 @@
+D:\Thực tập CNTT 4\BTL\Shop\Shop.IRepository\bin\Debug\net6.0\Shop.IRepository.deps.json
+D:\Thực tập CNTT 4\BTL\Shop\Shop.IRepository\bin\Debug\net6.0\Shop.IRepository.dll
+D:\Thực tập CNTT 4\BTL\Shop\Shop.IRepository\bin\Debug\net6.0\Shop.IRepository.pdb
+D:\Thực tập CNTT 4\BTL\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.csproj.AssemblyReference.cache
+D:\Thực tập CNTT 4\BTL\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.GeneratedMSBuildEditorConfig.editorconfig
+D:\Thực tập CNTT 4\BTL\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.AssemblyInfoInputs.cache
+D:\Thực tập CNTT 4\BTL\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.AssemblyInfo.cs
+D:\Thực tập CNTT 4\BTL\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.csproj.CoreCompileInputs.cache
+D:\Thực tập CNTT 4\BTL\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.dll
+D:\Thực tập CNTT 4\BTL\Shop\Shop.IRepository\obj\Debug\net6.0\refint\Shop.IRepository.dll
+D:\Thực tập CNTT 4\BTL\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.pdb
+D:\Thực tập CNTT 4\BTL\Shop\Shop.IRepository\obj\Debug\net6.0\ref\Shop.IRepository.dll
+D:\Thực tập CNTT 4\DeSo9_HoangThiKimNgan\Shop\Shop.IRepository\bin\Debug\net6.0\Shop.IRepository.deps.json
+D:\Thực tập CNTT 4\DeSo9_HoangThiKimNgan\Shop\Shop.IRepository\bin\Debug\net6.0\Shop.IRepository.dll
+D:\Thực tập CNTT 4\DeSo9_HoangThiKimNgan\Shop\Shop.IRepository\bin\Debug\net6.0\Shop.IRepository.pdb
+D:\Thực tập CNTT 4\DeSo9_HoangThiKimNgan\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.csproj.AssemblyReference.cache
+D:\Thực tập CNTT 4\DeSo9_HoangThiKimNgan\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.GeneratedMSBuildEditorConfig.editorconfig
+D:\Thực tập CNTT 4\DeSo9_HoangThiKimNgan\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.AssemblyInfoInputs.cache
+D:\Thực tập CNTT 4\DeSo9_HoangThiKimNgan\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.AssemblyInfo.cs
+D:\Thực tập CNTT 4\DeSo9_HoangThiKimNgan\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.csproj.CoreCompileInputs.cache
+D:\Thực tập CNTT 4\DeSo9_HoangThiKimNgan\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.dll
+D:\Thực tập CNTT 4\DeSo9_HoangThiKimNgan\Shop\Shop.IRepository\obj\Debug\net6.0\refint\Shop.IRepository.dll
+D:\Thực tập CNTT 4\DeSo9_HoangThiKimNgan\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.pdb
+D:\Thực tập CNTT 4\DeSo9_HoangThiKimNgan\Shop\Shop.IRepository\obj\Debug\net6.0\ref\Shop.IRepository.dll
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.IRepository\bin\Debug\net6.0\Shop.IRepository.deps.json
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.IRepository\bin\Debug\net6.0\Shop.IRepository.dll
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.IRepository\bin\Debug\net6.0\Shop.IRepository.pdb
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.csproj.AssemblyReference.cache
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.GeneratedMSBuildEditorConfig.editorconfig
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.AssemblyInfoInputs.cache
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.AssemblyInfo.cs
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.csproj.CoreCompileInputs.cache
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.dll
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.IRepository\obj\Debug\net6.0\refint\Shop.IRepository.dll
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.pdb
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.IRepository\obj\Debug\net6.0\ref\Shop.IRepository.dll
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.IRepository\bin\Debug\net6.0\Shop.IRepository.runtimeconfig.json
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.genruntimeconfig.cache
+D:\Shop\Shop.IRepository\bin\Debug\net6.0\Shop.IRepository.deps.json
+D:\Shop\Shop.IRepository\bin\Debug\net6.0\Shop.IRepository.runtimeconfig.json
+D:\Shop\Shop.IRepository\bin\Debug\net6.0\Shop.IRepository.dll
+D:\Shop\Shop.IRepository\bin\Debug\net6.0\Shop.IRepository.pdb
+D:\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.csproj.AssemblyReference.cache
+D:\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.GeneratedMSBuildEditorConfig.editorconfig
+D:\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.AssemblyInfoInputs.cache
+D:\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.AssemblyInfo.cs
+D:\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.csproj.CoreCompileInputs.cache
+D:\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.dll
+D:\Shop\Shop.IRepository\obj\Debug\net6.0\refint\Shop.IRepository.dll
+D:\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.pdb
+D:\Shop\Shop.IRepository\obj\Debug\net6.0\Shop.IRepository.genruntimeconfig.cache
+D:\Shop\Shop.IRepository\obj\Debug\net6.0\ref\Shop.IRepository.dll

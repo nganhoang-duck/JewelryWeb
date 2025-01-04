@@ -1,0 +1,46 @@
+﻿@model List<Shop.Model.Entities.User>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Danh sách tài khoản</h5>
+            <a href="/Administrator/User/Create"
+               class="btn btn-primary mb-2">Thêm mới</a>
+            <table id="myTable" class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Email</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>Chức năng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Email</td>
+                            <td>@item.Username</td>
+                            <td>@item.Password</td>
+                            <td>
+                                <a href="/Administrator/User/Edit/@item.Id">
+                                    <i class="fa fa-paint-brush"></i>
+                                </a> |
+                                <a href="/Administrator/User/Delete/@item.Id"
+                                   onclick="return confirm('Bạn có chắc chắn xóa?');">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

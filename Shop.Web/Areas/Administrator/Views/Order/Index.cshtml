@@ -1,0 +1,55 @@
+﻿@model List<Shop.Model.Entities.Order>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Danh sách tài khoản</h5>
+            <a href="/Administrator/User/Create"
+               class="btn btn-primary mb-2">Thêm mới</a>
+            <table id="myTable" class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tên khách hàng</th>
+                        <th>Địa chỉ</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>Lời nhắn</th>
+                        <th>Thời gian tạo</th>
+                        <th>Phương thức thanh toán</th>
+                        <th>Trạng thái thanh toán</th>
+                        <th>Trạng thái</th>
+                        <th>Chức năng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.CustomerName</td>
+                            <td>@item.CustomerAddress</td>
+                            <td>@item.CustomerEmail</td>
+                            <td>@item.CustomerMobile</td>
+                            <td>@item.CustomerMessage</td>
+                            <td>@item.CreatedDate</td>
+                            <td>@item.PaymentMethod</td>
+                            <td>@item.PaymentStatus</td>
+                            <td>@item.Status</td>
+                            <td>
+                                <a href="/Administrator/Order/Edit/@item.Id">
+                                    <i class="fa fa-paint-brush"></i>
+                                </a> |
+                               
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

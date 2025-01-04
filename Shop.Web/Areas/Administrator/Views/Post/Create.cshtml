@@ -1,0 +1,59 @@
+﻿@model Shop.Model.Entities.Post
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Thêm mới bài viết</h5>
+            <form action="/Administrator/Post/Create" method="post" class="row-col-md-6">
+                <div class="col-12">
+                    <label asp-for="Id" class="form-label"></label>
+                    <input asp-for="Id" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="Name" class="form-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="CategoryId" class="form-label"></label>
+                    <input asp-for="CategoryId" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="Image" class="form-label"></label>
+                    <input type="file" asp-for="Image" class="form-control" />
+                </div>
+                <div class="col-12">
+                    <label asp-for="Description" class="form-label"></label>
+                    <input asp-for="Description" class="form-control" />
+                </div>
+                <div class="col-12">
+                    @Html.LabelFor(model => model.Content, htmlAttributes: new{@class = "control-label"})
+                    @Html.TextAreaFor(model => model.Content, htmlAttributes: new {@class = "form-control"})
+                    <script>
+                        CKEDITOR.replace('Content');
+                    </script>
+                </div>
+                <div class="col-12">
+                    <label asp-for="Status" class="form-label"></label>
+                    <div>
+                        <input checked="checked" type="radio" id="True" asp-for="Status" value="True" class="form-control" style="width:20px; height:20px;" />
+                        <label for="True" class="form-check-label">True</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="False" asp-for="Status" value="False" class="form-control" style="width:20px; height:20px;" />
+                        <label for="False" class="form-check-label">False</label>
+                    </div>
+                </div>
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary">Thêm mới</button>
+                    <button type="reset" class="btn btn-secondary">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

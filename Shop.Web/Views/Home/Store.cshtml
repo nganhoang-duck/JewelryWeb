@@ -1,0 +1,111 @@
+﻿@model Tuple<List<Shop.Model.Entities.ProductCategory>, List<Shop.Model.Entities.Product>>
+@{
+    ViewData["Title"] = "Store";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 offset-lg-2 text-center">
+				<div class="breadcrumb-text">
+					<p>Luxurious Jewelry</p>
+					<h1>Store</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end breadcrumb section -->
+<!-- products -->
+<div class="product-section mt-150 mb-150">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="product-filters">
+					<ul>
+						<li class="active" data-filter="*">All</li>
+						@foreach (var item in Model.Item1)
+						{
+							<li data-filter=".@item.Id">@item.Name</li>
+						}
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="row product-lists">
+			@foreach (var item in Model.Item2)
+			{
+				<div class="product-item col-lg-4 col-md-6 text-center @item.CategoryId">
+					<div class="single-product-item">
+						<div class="product-image">
+							<a href="/Home/ProductDetails/@item.Id">
+								<img src="~/img/products/@item.Image" alt=""></a>
+						</div>
+						<h3>@item.Name</h3>
+						<p style="font-size: 20px; font-weight: 200;" class="product-price">
+							@item.Promotion <del class="product-price">@item.Price</del></p>
+						<a href="#" onclick="addToCartWithPopup('@item.Id')" class="cart-btn">
+							<i class="fas fa-shopping-cart"></i> Add to Cart</a>
+						<div id="popup">
+							<p><i class="fas fa-shopping-cart"></i> Đã thêm sản phẩm vào giỏ hàng</p>
+						</div>
+						<script>
+							function addToCartWithPopup(itemId) {
+								// Hiển thị popup
+								var popup = document.getElementById('popup');
+								popup.style.display = 'block';
+
+								// Ẩn popup sau 5 giây
+								setTimeout(function () {
+									popup.style.display = 'none';
+								}, 5000);
+
+								// Thực hiện addToCart
+								addToCart(itemId);
+							}
+						</script>
+						<style>
+							/* Thêm các kiểu CSS cho popup */
+							#popup {
+								display: none;
+								position: fixed;
+								top: 70px; /* Đặt khoảng cách từ trên xuống để nằm dưới header */
+								right: 20px;
+								background-color: #fff;
+								padding: 20px;
+								border: 2px solid #000; /* Viền đen 2px */
+								border-radius: 10px; /* Bo góc 10px */
+								box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+								z-index: 9999;
+							}
+						</style>
+					</div>
+				</div>
+			}
+		</div>
+	</div>
+</div>
+<!-- end products -->
+<script>
+	$(document).ready(function () {
+		// đăng ký sự kiện click cho các thẻ li trong phần lọc sản phẩm
+		$('.product-filters ul li').click(function () {
+			// lấy giá trị của thuộc tính data-filter
+			var filterValue = $(this).data('filter');
+			// nếu giá trị là *, hiển thị tất cả sản phẩm
+			if (filterValue == '*') {
+				$('.product-item').removeClass('d-none');
+			} else {
+				// nếu không, ẩn tất cả các sản phẩm và hiển thị các sản phẩm thuộc danh mục được chọn
+				$('.product-item').addClass('d-none');
+				$(filterValue).removeClass('d-none');
+			}
+			// đánh dấu thẻ li hiện tại là active và bỏ active của các thẻ li khác
+			$(this).addClass('active').siblings().removeClass('active');
+		});
+	});
+</script>
+

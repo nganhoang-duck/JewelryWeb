@@ -1,0 +1,56 @@
+D:\Thực tập CNTT 4\BTL\Shop\Shop.Model\bin\Debug\net6.0\Shop.Model.deps.json
+D:\Thực tập CNTT 4\BTL\Shop\Shop.Model\bin\Debug\net6.0\Shop.Model.runtimeconfig.json
+D:\Thực tập CNTT 4\BTL\Shop\Shop.Model\bin\Debug\net6.0\Shop.Model.dll
+D:\Thực tập CNTT 4\BTL\Shop\Shop.Model\bin\Debug\net6.0\Shop.Model.pdb
+D:\Thực tập CNTT 4\BTL\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.csproj.AssemblyReference.cache
+D:\Thực tập CNTT 4\BTL\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\Thực tập CNTT 4\BTL\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.AssemblyInfoInputs.cache
+D:\Thực tập CNTT 4\BTL\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.AssemblyInfo.cs
+D:\Thực tập CNTT 4\BTL\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.csproj.CoreCompileInputs.cache
+D:\Thực tập CNTT 4\BTL\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.dll
+D:\Thực tập CNTT 4\BTL\Shop\Shop.Model\obj\Debug\net6.0\refint\Shop.Model.dll
+D:\Thực tập CNTT 4\BTL\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.pdb
+D:\Thực tập CNTT 4\BTL\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.genruntimeconfig.cache
+D:\Thực tập CNTT 4\BTL\Shop\Shop.Model\obj\Debug\net6.0\ref\Shop.Model.dll
+D:\Thực tập CNTT 4\DeSo9_HoangThiKimNgan\Shop\Shop.Model\bin\Debug\net6.0\Shop.Model.deps.json
+D:\Thực tập CNTT 4\DeSo9_HoangThiKimNgan\Shop\Shop.Model\bin\Debug\net6.0\Shop.Model.runtimeconfig.json
+D:\Thực tập CNTT 4\DeSo9_HoangThiKimNgan\Shop\Shop.Model\bin\Debug\net6.0\Shop.Model.dll
+D:\Thực tập CNTT 4\DeSo9_HoangThiKimNgan\Shop\Shop.Model\bin\Debug\net6.0\Shop.Model.pdb
+D:\Thực tập CNTT 4\DeSo9_HoangThiKimNgan\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.csproj.AssemblyReference.cache
+D:\Thực tập CNTT 4\DeSo9_HoangThiKimNgan\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\Thực tập CNTT 4\DeSo9_HoangThiKimNgan\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.AssemblyInfoInputs.cache
+D:\Thực tập CNTT 4\DeSo9_HoangThiKimNgan\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.AssemblyInfo.cs
+D:\Thực tập CNTT 4\DeSo9_HoangThiKimNgan\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.csproj.CoreCompileInputs.cache
+D:\Thực tập CNTT 4\DeSo9_HoangThiKimNgan\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.dll
+D:\Thực tập CNTT 4\DeSo9_HoangThiKimNgan\Shop\Shop.Model\obj\Debug\net6.0\refint\Shop.Model.dll
+D:\Thực tập CNTT 4\DeSo9_HoangThiKimNgan\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.pdb
+D:\Thực tập CNTT 4\DeSo9_HoangThiKimNgan\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.genruntimeconfig.cache
+D:\Thực tập CNTT 4\DeSo9_HoangThiKimNgan\Shop\Shop.Model\obj\Debug\net6.0\ref\Shop.Model.dll
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.Model\bin\Debug\net6.0\Shop.Model.deps.json
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.Model\bin\Debug\net6.0\Shop.Model.runtimeconfig.json
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.Model\bin\Debug\net6.0\Shop.Model.dll
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.Model\bin\Debug\net6.0\Shop.Model.pdb
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.csproj.AssemblyReference.cache
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.AssemblyInfoInputs.cache
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.AssemblyInfo.cs
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.csproj.CoreCompileInputs.cache
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.dll
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.Model\obj\Debug\net6.0\refint\Shop.Model.dll
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.pdb
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.genruntimeconfig.cache
+D:\TTCNTT4\Thực tập CNTT 4\BTL\DeSo9_HoangThiKimNgan\Shop\Shop.Model\obj\Debug\net6.0\ref\Shop.Model.dll
+D:\Shop\Shop.Model\bin\Debug\net6.0\Shop.Model.deps.json
+D:\Shop\Shop.Model\bin\Debug\net6.0\Shop.Model.runtimeconfig.json
+D:\Shop\Shop.Model\bin\Debug\net6.0\Shop.Model.dll
+D:\Shop\Shop.Model\bin\Debug\net6.0\Shop.Model.pdb
+D:\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.csproj.AssemblyReference.cache
+D:\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.AssemblyInfoInputs.cache
+D:\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.AssemblyInfo.cs
+D:\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.csproj.CoreCompileInputs.cache
+D:\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.dll
+D:\Shop\Shop.Model\obj\Debug\net6.0\refint\Shop.Model.dll
+D:\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.pdb
+D:\Shop\Shop.Model\obj\Debug\net6.0\Shop.Model.genruntimeconfig.cache
+D:\Shop\Shop.Model\obj\Debug\net6.0\ref\Shop.Model.dll
